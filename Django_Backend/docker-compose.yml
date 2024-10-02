@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  # django-app:
+  #   build: .
+  #   container_name: django-backend
+  #   volumes:
+  #     - .:/app  # Mount the current directory to /app in the container
+  #   ports:
+  #     - "8000:8000"
+  #   depends_on:
+  #     - opensearch
+
+  opensearch:
+    image: opensearchproject/opensearch:latest
+    container_name: opensearch
+    environment:
+      - discovery.type=single-node
+      - OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m
+      - plugins.security.disabled=true
+      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=Deepanshu27@123  
+    ports:
+      - "9200:9200"
+    volumes:
+      - opensearch_data:/usr/share/opensearch/data
+
+volumes:
+  opensearch_data:
