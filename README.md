@@ -23,15 +23,15 @@ Follow these steps to set up and run the project:
 - Python 3.12 or higher
 - Docker and Docker Compose
 - OpenSearch running on `localhost:9200` (or any other preferred port)
-- A dataset in CSV format (ensure it matches the required structure)
+- A dataset in CSV downloaded from kaggle
 
 ### Steps
 
 1. **Clone the Repository**
 
    ```bash
-   git clone <repository_url>
-   cd <repository_directory>
+   git clone https://github.com/dee077/Rapidious-Assignment.git
+   cd Rapidious-Assignment
    cd Django_Backend
    ```
 
@@ -62,6 +62,7 @@ Follow these steps to set up and run the project:
    ```bash
    python ingest_data.py
    ```
+   This will index each entry one by one so it may take some time to complete.
 
 6. **Run Backend Application**
 
@@ -71,8 +72,8 @@ Follow these steps to set up and run the project:
 
 7. **Run Frontend Application**
    ```bash
-   cd react-frontend
-   npm install
+   cd react_frontend
+   npm i
    npm start
    ```
 
@@ -111,7 +112,6 @@ The application provides several API endpoints to interact with the data stored 
   }
   ```
 - **Response:**
-- **Response:**
   ```json
   [
     {
@@ -127,7 +127,7 @@ The application provides several API endpoints to interact with the data stored 
   ]
   ```
 
-### 6. **GET /api/recipes/unique-keys**
+### 3. **GET /api/recipes/unique-keys**
 
 - **Description:** Fetch unique keywords from all recipes.
 - **Response:**
@@ -143,13 +143,14 @@ The application provides several API endpoints to interact with the data stored 
       "shellfish",
       "spice",
       "spring"
+      ...
     ]
   }
   ```
 
 ### Note:
 
-Ensure that the server is running and that the API endpoints are accessible at `http://localhost:8000/api/recipes` (or your configured port).
+Ensure that the server is running and that the API endpoints are accessible at `http://localhost:8000/` (or your configured port).
 
 ## Conclusion
 
