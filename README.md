@@ -23,7 +23,7 @@ Follow these steps to set up and run the project:
 - Python 3.12 or higher
 - Docker and Docker Compose
 - OpenSearch running on `localhost:9200` (or any other preferred port)
-- A dataset in CSV downloaded from kaggle
+- A dataset in CSV downloaded from kaggle in `Django_Backend/data/data.csv`
 
 ### Steps
 
