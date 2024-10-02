@@ -143,7 +143,7 @@ The application provides several API endpoints to interact with the data stored 
       "shellfish",
       "spice",
       "spring"
-      ...And More
+      ...
     ]
   }
   ```
