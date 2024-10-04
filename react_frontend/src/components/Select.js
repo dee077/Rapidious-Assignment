@@ -59,7 +59,7 @@ const Select = ({ options }) => {
   }, []);
 
   return (
-    <div className="flex justify-center">
+    <div className="w-1/2">
       <div className="w-full max-w-lg" ref={inputRef}>
         {/* Searchable Select Input */}
         <div className={`${!showOptions && ' border-white'} border rounded p-2 relative`}>

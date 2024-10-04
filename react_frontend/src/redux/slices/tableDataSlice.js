@@ -30,6 +30,7 @@ const tableDataSlice = createSlice({
     pagination: {
       page: 1,
       size: 10,
+      title: "",
       keywords: [],
     },
     isLoading: false,
@@ -42,6 +43,9 @@ const tableDataSlice = createSlice({
     setSize: (state, action) => {
       state.pagination.size = action.payload; 
     },
+    setTitle: (state, action) => {
+      state.pagination.title = action.payload; 
+    },
     setKeywords: (state, action) => {
       state.pagination.keywords = action.payload; 
     },
@@ -49,6 +53,7 @@ const tableDataSlice = createSlice({
       state.pagination = {
         page: 1,
         size: 10,
+        title: "",
         keywords: [],
       }; 
     },
@@ -70,6 +75,6 @@ const tableDataSlice = createSlice({
   },
 });
 
-export const { setPage, setSize, setKeywords, resetPagination } = tableDataSlice.actions;
+export const { setPage, setSize, setKeywords, setTitle, resetPagination } = tableDataSlice.actions;
 
 export default tableDataSlice.reducer;

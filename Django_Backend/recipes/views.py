@@ -46,6 +46,15 @@ class RecipeFilter(APIView):
             }
         }
 
+        title = request.data.get('title', None)
+        if title and title.strip():
+            query["bool"]["must"].append({
+                "match_phrase_prefix": {
+                    "title": title  
+                }
+            })
+
+
         keywords = request.data.get('keywords', []) 
         if keywords:
             

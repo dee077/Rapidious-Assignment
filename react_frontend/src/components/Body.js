@@ -4,6 +4,7 @@ import Select from './Select'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUniqueKeys } from '../redux/slices/uniqueKeysSlice'
 import { fetchTableData } from '../redux/slices/tableDataSlice'
+import Search from './Search';
 
 const Body = () => {
 
@@ -22,7 +23,10 @@ const Body = () => {
   return (
     <div>
       <h1 className='text-5xl text-center font-bold my-12'>Find your perfect Dish with Recipe!</h1>
-      <Select options={uniqueKeys} />
+      <div className='flex mx-14'>
+        <Search />
+        <Select options={uniqueKeys} />
+      </div>
       <Table tableData={tableData} pagination={pagination} />
     </div>
   )
